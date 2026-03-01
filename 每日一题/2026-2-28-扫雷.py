@@ -43,6 +43,7 @@ class Minesweeper:
     def get_num_neighboring_bombs(self, row, col):
         num_neighboring_bombs = 0
         # 检查周围 8 个格子
+        #这个居然是最优的遍历方法
         for r in range(max(0, row-1), min(self.height-1, row+1)+1):
             for c in range(max(0, col-1), min(self.width-1, col+1)+1):
                 if r == row and c == col:
